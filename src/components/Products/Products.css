@@ -1,0 +1,137 @@
+.carts {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    gap: 1rem;
+    padding-top: 3em;
+    
+
+    
+}
+
+a {
+    text-decoration: none;
+    color: var(--dark-color);
+    
+}
+.cart-name{
+    cursor: pointer;
+}
+                   
+
+@media (max-width: 35em){
+    .carts {
+        
+        grid-template-columns: repeat(2, 1fr);
+        width: 98vw;
+        margin: auto;
+        gap: .5rem;
+     }
+
+    
+}
+@media (min-width: 35em){
+    .carts {
+        width: 60vw;
+        margin: auto;
+    }
+}
+
+/* Product Item */
+.img-container {
+    min-width: fit-content(20em);
+    aspect-ratio: 1.5 / 2.5;
+    margin-bottom: 5px;
+    position: relative;
+}
+
+.img-container img{
+    width:100%;
+    height:100%;
+    object-fit: cover;
+
+}
+.flex-column{
+    display: flex;
+    flex-direction: column;
+}
+.cart {
+   
+    max-width: 100%;
+    margin-bottom: .8rem;
+   
+}
+.carts-description {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 7px 0;
+    justify-content: flex-start;
+    background-color: white;
+    z-index: 1;
+  
+
+}
+.add-to-cart{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    text-transform: uppercase;
+    transform: translateY(20%);
+    opacity: 0;
+    width: 100%;
+    padding: 1.4em;
+    background-color: rgb(255, 255, 255);
+    backdrop-filter: blur(1rem);
+    border: none;
+    transition: .4s ease;
+  
+   
+}
+.img-container:hover > .add-to-cart {
+    transform: translateY(0%);
+    opacity: 1;
+    background-color: rgba(255, 255, 255, 0.712);
+    backdrop-filter: blur(1rem);
+    transition: .4s ease;
+
+}
+.add-to-cart:hover {
+    cursor: pointer;
+    transition: .3s ease;
+    transform: scale(1.04);
+}
+.add-to-cart:active {
+    background-color: black;
+}
+.cart-name {
+    font-size: .8rem;
+    font-weight: 350;
+    text-transform: uppercase;
+    margin-bottom: 2px;
+  
+}
+
+.cart-price {
+    font-size: .75rem;
+    font-weight: 300;
+}
+.name-price {
+    align-items: center;
+    justify-content: space-between;
+}
+
+@media (max-width: 35em) {
+    .cart-name {
+        font-size: .62rem;
+        font-weight: 350;
+        text-transform: uppercase;
+        margin-bottom: 2px;
+    }
+    .cart-price {
+        font-size: .59rem;
+        font-weight: 280;
+    }
+  
+   
+}
